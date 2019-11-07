@@ -1,0 +1,19 @@
+{
+  "name": "node-graphql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "graphql-yoga": "^1.18.3",
+    "nexus": "0.12.0-rc.4",
+    "nexus-prisma": "^0.5.0"
+  },
+  "scripts": {
+    "seed": "node prisma/seed.js",
+    "dev": "node src",
+    "postinstall": "prisma2 generate"
+  },
+  "devDependencies": {
+    "prisma2": "2.0.0-preview015"
+  }
+}

@@ -1,0 +1,18 @@
+generator photon {
+  provider = "photonjs"
+}
+
+generator nexus_prisma {
+  provider = "nexus-prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:dev.db"
+}
+
+model Quote {
+  id      String @default(cuid()) @id
+  author  String
+  content String @unique
+}
